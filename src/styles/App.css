@@ -1,0 +1,8 @@
+.cajaPrincipal{
+    display: flex;
+    flex-direction: column;
+    border: solid px black;
+    height: 100vh; /* Altura fija al 100% de la altura de la ventana del navegador */
+    width: 100vw; /* Ancho fijo al 100% del ancho de la ventana del navegador */
+}
+

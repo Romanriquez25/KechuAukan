@@ -1,0 +1,23 @@
+.cajaBodyIndex{
+    height: 80vh;
+    width: 100%;
+    background-color: aquamarine;
+    overflow: auto;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 50px 50px;
+    gap: 10px;
+}
+
+.grid-item{
+    background-color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    object-fit: cover;
+}
+    

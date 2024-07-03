@@ -1,0 +1,22 @@
+/* Si quieres que .cajaRRSS se quede fijo en la pantalla */
+.cajaRRSS {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #6CBCB6
+    ; /* Asegúrate de definir un ancho si es necesario */
+}
+
+.cajaRRSS a {
+    color:#2d2935;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
