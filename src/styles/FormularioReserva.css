@@ -1,0 +1,132 @@
+.cajaMainFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 500px;
+  justify-content: flex-end; /* Asegura que el contenido se alinee a la derecha */
+  align-items: flex-end; /* Asegura que el contenido se alinee al final del contenedor */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  position: fixed; /* Usa 'fixed' para posicionarlo relativo a la ventana */
+  bottom: 150px;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent; /* Asegúrate de que el contenedor sea transparente */
+}
+
+.hamburger2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #5d2e74;
+  font-family: "Poppins", sans-serif;
+  color: #bcbc6c;
+  border-radius: 100px;
+  margin: 10px;
+  position: absolute; /* Asegura que el ícono esté posicionado absolutamente dentro del contenedor */
+  bottom: -70px;
+  right: 0;
+  z-index: 1001;
+}
+
+.cajaTitleReserva{
+  font-size: 20px;
+}
+
+
+.hidenReserva{
+  display: none;
+
+}
+
+.hamburger2:active {
+  animation: jello-horizontal 0.5s both;
+
+}
+
+.menu-shownReserva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-height: 100vh; /* Asegura que el menú cubra toda la altura de la ventana */
+  width: 100vw;
+  height: 100vh; /* Ajusta la altura para cubrir toda la ventana del navegador */
+  opacity: 1;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+  background-color: aqua;
+  animation: slideIn 0.5s ease-in-out forwards;
+  z-index: 1000;
+  position: fixed; /* O absolute, dependiendo de tu estructura y necesidades */
+  top: 0; /* Alinea el menú con la parte superior de la ventana */
+  right: 0; /* Alinea el menú con el lado derecho de la ventana (ajusta según sea necesario) */
+}
+
+.menu-hiddenReserva {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-height: 100vh; /* Asegura que el menú cubra toda la altura de la ventana */
+  width: 100vw;
+  height: 100vh;
+  max-height: 0;
+  height: 100vh; /* Mantiene la altura para una transición suave */
+  background-color: aqua;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+  animation: slideOut 0.5s ease-in-out forwards;
+  position: fixed; /* Asegura que el menú se mantenga en posición fija */
+  top: 0; /* Alinea el menú con la parte superior de la ventana */
+  right: 0; /* Alinea el menú con el lado derecho de la ventana (ajusta según sea necesario) */
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translatey(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animación de salida */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}

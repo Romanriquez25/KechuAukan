@@ -1,23 +1,48 @@
 .cajaBodyIndex{
-    height: 80vh;
+    height: 70vh;
     width: 100%;
-    background-color: aquamarine;
     overflow: auto;
-
-}
-
-.grid-container{
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 50px 50px 50px;
-    gap: 10px;
-}
-
-.grid-item{
-    background-color: #f1f1f1;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    object-fit: cover;
-}
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
     
+}
+
+.cajaImgMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.cajaImgLis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('\img\agua.png');
+    
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Ajusta el valor según necesites */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fondoAnim {
+	0% {
+		background-position: center bottom;
+		background-size: 100%;
+	}
+
+	100% {
+		background-position: center bottom;
+		background-size: 150%;
+	}
+}

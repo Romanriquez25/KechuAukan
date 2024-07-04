@@ -1,34 +1,133 @@
-import React from 'react';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import '../styles/Carrusel.css'; // Asegúrate de importar los estilos CSS correctamente
+import * as React from "react";
+import { ImageList, ImageListItem } from "@mui/material";
 
-const Carrusel = () => {
-    const imgs = [
-        { id: 1, src: '/img/image1.jpg', alt: 'imagen 1' },
-        { id: 2, src: '/img/image2.jpg', alt: 'imagen 2' },
-        { id: 3, src: '/img/image3.jpg', alt: 'imagen 3' },
-        { id: 4, src: '/img/image4.jpg', alt: 'imagen 4' },
-        { id: 5, src: '/img/image5.jpg', alt: 'imagen 5' },
-        { id: 6, src: '/img/image6.jpg', alt: 'imagen 6' },
-    ];
+function ImageItem({ item, index }) {
+  const ref = React.useRef(null);
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        
-    };
+  // Función para determinar la animación basada en el índice
+  const getAnimationName = (index) => {
+    const animations = ['slideInFromLeft', 'slideInFromRight', 'slideInFromTop', 'slideInFromBottom'];
+    return animations[index % animations.length]; // Rota entre las animaciones
+  };
 
-    return (
-        <>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, reiciendis. Facilis, corrupti consequatur assumenda inventore repellendus suscipit quaerat similique, natus amet asperiores non consectetur nam perferendis sit iste unde nulla?</p>
-        </>
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      },
+      {
+        threshold: 0.1,
+      }
     );
-};
 
-export default Carrusel;
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return (
+    <ImageListItem
+      ref={ref}
+      sx={{
+        "& img": {
+          transition: "transform 0.5s ease",
+          minHeight: "100%",
+          objectFit: "cover",
+          
+        },
+        "&.visible img": {
+          animation: `${getAnimationName(index)} 1s ease forwards`,
+        },
+      }}
+    >
+      <img
+        srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+        src={`${item.img}?w=161&fit=crop&auto=format`}
+        loading="lazy"
+        alt={item.alt}
+      />
+    </ImageListItem>
+  );
+}
+
+export default function WovenImageList() {
+  const imgs = [
+
+    { img: "../img/image4.jpg", alt: "parcela1" },
+    { img: "../img/image5.jpg", alt: "parcela2" },
+    { img: "../img/image6.jpg", alt: "parcela3" },
+    { img: "../img/image7.jpg", alt: "parcela4" },
+    { img: "../img/image8.jpg", alt: "parcela5" },
+    { img: "../img/image9.jpg", alt: "parcela6" },
+    { img: "../img/image10.jpg", alt: "parcela7" },
+    { img: "../img/image11.jpg", alt: "parcela8" },
+    { img: "../img/image12.jpg", alt: "parcela9" },
+    { img: "../img/image13.jpg", alt: "parcela10" },
+    { img: "../img/image14.jpg", alt: "parcela11" },
+    { img: "../img/image15.jpg", alt: "parcela12" },
+
+    
+  ];
+
+  return (
+    <>
+      <ImageList sx={{ height: "100%", padding: "20px" }} variant="woven" cols={3} gap={8}>
+        {imgs.map((item, index) => (
+          <ImageItem key={item.img} item={item} index={index} />
+        ))}
+      </ImageList>
+      <style jsx global>{`
+        @keyframes slideInFromLeft {
+          from {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        @keyframes slideInFromRight {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        @keyframes slideInFromTop {
+          from {
+            transform: translateY(-100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        @keyframes slideInFromBottom {
+          from {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      `}</style>
+    </>
+  );
+}
