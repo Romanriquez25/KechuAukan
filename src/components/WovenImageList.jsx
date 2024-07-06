@@ -66,24 +66,24 @@ function ImageItem({ item, index }) {
 
 export default function WovenImageList() {
   const imgs = [
-    { img: "/img/image2.jpg", alt: "parcela1" },
-    { img: "/img/image5.jpg", alt: "parcela2" },
-    { img: "/img/image6.jpg", alt: "parcela3" },
-    { img: "/img/image7.jpg", alt: "parcela4" },
-    { img: "/img/image8.jpg", alt: "parcela5" },
-    { img: "/img/image9.jpg", alt: "parcela6" },
-    { img: "/img/image10.jpg", alt: "parcela7" },
-    { img: "/img/image11.jpg", alt: "parcela8" },
-    { img: "/img/image12.jpg", alt: "parcela9" },
-    { img: "/img/image13.jpg", alt: "parcela10" },
-    { img: "/img/image14.jpg", alt: "parcela11" },
-    { img: "/img/image15.jpg", alt: "parcela12" },
+    { img: "img/image2.jpg", alt: "parcela1" },
+    { img: "img/image5.jpg", alt: "parcela2" },
+    { img: "img/image6.jpg", alt: "parcela3" },
+    { img: "img/image7.jpg", alt: "parcela4" },
+    { img: "img/image8.jpg", alt: "parcela5" },
+    { img: "img/image9.jpg", alt: "parcela6" },
+    { img: "img/image10.jpg", alt: "parcela7" },
+    { img: "img/image11.jpg", alt: "parcela8" },
+    { img: "img/image12.jpg", alt: "parcela9" },
+    { img: "img/image13.jpg", alt: "parcela10" },
+    { img: "img/image14.jpg", alt: "parcela11" },
+    { img: "img/image15.jpg", alt: "parcela12" },
   ];
 
   return (
     <>
       <ImageList sx={{ height:'auto', padding: "20px",
-           backgroundImage: "url('/img/image21.png')",
+           backgroundImage: "url('img/image112.png')",
 
        }} variant="woven" cols={3} gap={8}>
         {imgs.map((item, index) => (

@@ -15,7 +15,7 @@
     width: 100vw;
     background-size: cover, cover; /* Asegura que ambas imágenes cubran el área */
     background-position: center center, center center; /* Centra ambas imágenes */
-    background-image: url('./img/image21.png'), url('./img/image6.jpg'); /* Ruta a tus imágenes */
+    background-image: url(/img/image112.png);/* Ruta a tus imágenes */
     position: relative;
     z-index: 1; /* Asegura que la cabecera esté en la capa más baja */
   }
