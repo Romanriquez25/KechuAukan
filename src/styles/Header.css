@@ -6,18 +6,19 @@
 
 @media only screen and (max-width: 600px) {
 
-  .header {
+ .header {
     display: flex;
     align-items: center;
     padding: 5px;
     height: 20vh;
-    background-color: #6cbcb6;
+    background-color: #4cdaf0;
     width: 100vw;
-    background-size: cover;
+    background-size: cover, cover; /* Asegura que ambas imágenes cubran el área */
+    background-position: center center, center center; /* Centra ambas imágenes */
+    background-image: url('./img/image21.png'), url('./img/image6.jpg'); /* Ruta a tus imágenes */
     position: relative;
     z-index: 1; /* Asegura que la cabecera esté en la capa más baja */
   }
-
   .logo {
     display: none;
   }
@@ -25,9 +26,9 @@
   .fontL, .fontL2 {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
-    color: #bcbc6c;
+    color: #ffffff;
     animation: slideUp 1.5s ease;
-    background-color: #5d2e74;
+    background-color: #07262b;
   }
 
   .fontL2 {
@@ -63,7 +64,7 @@
     right: 20px;
     z-index: 10; /* Asegura que el ícono de hamburguesa esté siempre visible por encima de todo */
     cursor: pointer;
-    color: #5d2e74;
+    color: #ffffff;
   }
 
   .hamburger:active {
@@ -72,7 +73,7 @@
 
   .navbar li a {
     text-decoration: none;
-    color: #5d2e74;
+    color: black;
     font-size: 20px;
     font-weight: bold;
   }
@@ -90,7 +91,7 @@
     padding-top: 100px;
     padding-left: 20px; /* Espacio desde el borde izquierdo */
     z-index: 5;
-    background-color: #bcbc6c;
+    background-color: #45b8ce;
     transition: transform 1s ease, opacity 1s ease;
   }
 
@@ -191,7 +192,7 @@
     padding-top: 100px;
     padding-left: 20px; /* Espacio desde el borde izquierdo */
     z-index: 5;
-    background-color: #bcbc6c;
+    background-color: #45b8ce;
     transition: transform 1s ease, opacity 1s ease;
   }
 

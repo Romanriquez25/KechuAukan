@@ -39,15 +39,20 @@ function ImageItem({ item, index }) {
     <ImageListItem
       ref={ref}
       sx={{
-        "& img": {
-          transition: "transform 0.5s ease",
-          minHeight: "100%",
-          objectFit: "cover",
-        },
-        "&.visible img": {
-          animation: `${getAnimationName(index)} 1s ease forwards`,
-        },
-      }}
+  "& img": {
+    width: "100%",
+    transition: "transform 0.5s ease, opacity 0.5s ease",
+    borderRadius: "8px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  },
+  "&.visible img": {
+    animation: `${getAnimationName(index)} 1s ease forwards`,
+
+    transform: "scale(1)",
+    opacity: 1,
+  },
+}}
+
     >
       <img
         srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
@@ -77,7 +82,10 @@ export default function WovenImageList() {
 
   return (
     <>
-      <ImageList sx={{ height: "100%", padding: "20px" }} variant="woven" cols={3} gap={8}>
+      <ImageList sx={{ height:'auto', padding: "20px",
+           backgroundImage: "url('/img/image21.png')",
+
+       }} variant="woven" cols={3} gap={8}>
         {imgs.map((item, index) => (
           <ImageItem key={item.img} item={item} index={index} />
         ))}

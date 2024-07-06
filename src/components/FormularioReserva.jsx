@@ -14,6 +14,7 @@ import BasicDateCalendar from "./Calendario"; // Importa el nuevo componente de 
 import { Typography } from "@mui/material";
 import { set } from "date-fns";
 
+
 function FormularioReserva() {
   // Estado para controlar la visibilidad del menú de reserva
   const [openMenureserva, setOpenMenureserva] = useState(false);
@@ -138,7 +139,9 @@ function FormularioReserva() {
           className={openMenureserva ? "menu-shownReserva" : "menu-hiddenReserva"}
           onSubmit={handleSubmit}
         > 
-           <Typography variant="h2" component="h1" className="titleReserva">
+           <Typography  variant="h2" component="h1" className="titleReserva"
+           
+           >
             Reserva
           </Typography>
           <FormControl component="fieldset">

@@ -1,28 +1,26 @@
-.cajaBodyIndex{
-    height: 70vh;
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    
+.cajaBodyIndex {
+  height: 70vh;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
-.cajaImgMain{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.cajaImgMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
 }
 
+.cajaImgLis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 
-.cajaImgLis{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-image: url('\img\agua.png');
-    
+  background-image: url(../img/cajaImgLis.png);
 }
 @keyframes slideUp {
   from {
@@ -36,13 +34,13 @@
 }
 
 @keyframes fondoAnim {
-	0% {
-		background-position: center bottom;
-		background-size: 100%;
-	}
+  0% {
+    background-position: center bottom;
+    background-size: 100%;
+  }
 
-	100% {
-		background-position: center bottom;
-		background-size: 150%;
-	}
+  100% {
+    background-position: center bottom;
+    background-size: 150%;
+  }
 }
