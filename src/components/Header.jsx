@@ -51,24 +51,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <style jsx global>{`
-        @keyframes growIn {
-          from {
-            transform: scale(0);
-          }
-          to {
-            transform: scale(1);
-          }
-        }
-        @keyframes shrinkOut {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(0);
-          }
-        }
-      `}</style>
+      
     </>
   );
 };

@@ -13,6 +13,7 @@ function App() {
       <div className="cajaPrincipal">
         <Router>
           <Routes>
+            <Route path="/kechuaukan" element={<Index />} />
             <Route path="/" element={<Index />} />
             <Route path="home" element={<Index />} />
             <Route path="contacto" element={<Contacto/>} />

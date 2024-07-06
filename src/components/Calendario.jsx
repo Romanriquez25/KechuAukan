@@ -1,32 +1,30 @@
-import * as React from 'react';
-import dayjs from 'dayjs';
-import { DemoContainer, DemoItem } from '@mui/x-date-pickers/internals/demo';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateRangeCalendar } from '@mui/x-date-pickers-pro/DateRangeCalendar';
+import React, { useState } from "react";
+import "../styles/calendario.css"; // Importa el archivo CSS
 
-export default function DateRangeCalendarValue() {
-  const [value, setValue] = React.useState([
-    dayjs('2022-04-17'),
-    dayjs('2022-04-21'),
-    
-  ]);
+function BasicDateCalendar({ onChange }) {
+  const [value, setValue] = useState(""); // Inicializa como string vacío
+
+  const handleDateChange = (e) => {
+    const newValue = e.target.value;
+    setValue(newValue);
+    if (onChange) {
+      onChange(newValue);
+    }
+  };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={['DateRangeCalendar', 'DateRangeCalendar']}>
-        <DemoItem label="Uncontrolled calendar">
-          <DateRangeCalendar
-            defaultValue={[dayjs('2022-04-17'), dayjs('2022-04-21')]}
-          />
-        </DemoItem>
-        <DemoItem label="Controlled calendar">
-          <DateRangeCalendar
-            value={value}
-            onChange={(newValue) => setValue(newValue)}
-          />
-        </DemoItem>
-      </DemoContainer>
-    </LocalizationProvider>
+    <div className="date-calendar-container">
+      <label htmlFor="fecha" className="date-label">Fecha:</label>
+      <input
+        type="date"
+        id="fecha"
+        name="fecha"
+        value={value}
+        onChange={handleDateChange}
+        className="date-input"
+      />
+    </div>
   );
 }
+
+export default BasicDateCalendar;

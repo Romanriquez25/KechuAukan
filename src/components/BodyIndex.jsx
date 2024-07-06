@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/BodyIndex.css";
 import Box from "@mui/material/Box";
-import WovenImageList from "./Carrusel"; // Asegúrate de que la ruta sea correcta
+import WovenImageList from "./WovenImageList"; // Asegúrate de que la ruta sea correcta
 import { Typography } from "@mui/material";
 import FormularioReserva from "./FormularioReserva";
 
