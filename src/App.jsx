@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className="cajaPrincipal">
-        <Router basename="/kechuaukan">
+        <Router basename="/KechuAukan">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Index />} />

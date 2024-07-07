@@ -66,18 +66,18 @@ function ImageItem({ item, index }) {
 
 export default function WovenImageList() {
   const imgs = [
-    { img: "/kechuaukan/img/image2.jpg", alt: "parcela1" },
-{ img: "/kechuaukan/img/image5.jpg", alt: "parcela2" },
-{ img: "/kechuaukan/img/image6.jpg", alt: "parcela3" },
-{ img: "/kechuaukan/img/image7.jpg", alt: "parcela4" },
-{ img: "/kechuaukan/img/image8.jpg", alt: "parcela5" },
-{ img: "/kechuaukan/img/image9.jpg", alt: "parcela6" },
-{ img: "/kechuaukan/img/image10.jpg", alt: "parcela7" },
-{ img: "/kechuaukan/img/image11.jpg", alt: "parcela8" },
-{ img: "/kechuaukan/img/image12.jpg", alt: "parcela9" },
-{ img: "/kechuaukan/img/image13.jpg", alt: "parcela10" },
-{ img: "/kechuaukan/img/image14.jpg", alt: "parcela11" },
-{ img: "/kechuaukan/img/image15.jpg", alt: "parcela12" },
+    { img: "/KechuAukan/img/image2.jpg", alt: "parcela1" },
+{ img: "/KechuAukan/img/image5.jpg", alt: "parcela2" },
+{ img: "/KechuAukan/img/image6.jpg", alt: "parcela3" },
+{ img: "/KechuAukan/img/image7.jpg", alt: "parcela4" },
+{ img: "/KechuAukan/img/image8.jpg", alt: "parcela5" },
+{ img: "/KechuAukan/img/image9.jpg", alt: "parcela6" },
+{ img: "/KechuAukan/img/image10.jpg", alt: "parcela7" },
+{ img: "/KechuAukan/img/image11.jpg", alt: "parcela8" },
+{ img: "/KechuAukan/img/image12.jpg", alt: "parcela9" },
+{ img: "/KechuAukan/img/image13.jpg", alt: "parcela10" },
+{ img: "/KechuAukan/img/image14.jpg", alt: "parcela11" },
+{ img: "/KechuAukan/img/image15.jpg", alt: "parcela12" },
   ];
 
   return (

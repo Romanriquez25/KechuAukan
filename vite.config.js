@@ -7,5 +7,5 @@ export default defineConfig({
     outDir: 'dist',
   },
   publicDir: 'public',
-  base: '/kechuaukan/',
+  base: '/KechuAukan/', // Asegúrate de que esto coincida exactamente con el nombre del repositorio
 });
