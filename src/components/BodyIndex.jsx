@@ -13,7 +13,6 @@ const BodyIndex = () => {
             sx={{
               width: "100%", // Ajusta el ancho según necesites
               height: "500px", // Se ajusta para expandirse según el contenido
-              backgroundImage: 'url("img/enviadaBannerUrbano.jpg")', // Asegúrate de que la ruta de la imagen sea correcta
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "30% 30%",
