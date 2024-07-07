@@ -85,6 +85,7 @@ export default function WovenImageList() {
           height: 'auto',
           padding: "20px",
           backgroundImage: "url('/KechuAukan/img/image112.png')",
+          autoFocus:"false"
         }}
         variant="woven"
         cols={3}
