@@ -29,7 +29,7 @@ const Header = () => {
           </div>
           <ul className={openMenu ? "menu-shown" : "menu-hidden"}>
             <li>
-              <Link className="link" to="/home">
+              <Link className="link" to="/">
                 Home
               </Link>
             </li>
@@ -51,7 +51,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      
     </>
   );
 };
