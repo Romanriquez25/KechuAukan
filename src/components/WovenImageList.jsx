@@ -39,20 +39,18 @@ function ImageItem({ item, index }) {
     <ImageListItem
       ref={ref}
       sx={{
-  "& img": {
-    width: "100%",
-    transition: "transform 0.5s ease, opacity 0.5s ease",
-    borderRadius: "8px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-  },
-  "&.visible img": {
-    animation: `${getAnimationName(index)} 1s ease forwards`,
-
-    transform: "scale(1)",
-    opacity: 1,
-  },
-}}
-
+        "& img": {
+          width: "100%",
+          transition: "transform 0.5s ease, opacity 0.5s ease",
+          borderRadius: "8px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        },
+        "&.visible img": {
+          animation: `${getAnimationName(index)} 1s ease forwards`,
+          transform: "scale(1)",
+          opacity: 1,
+        },
+      }}
     >
       <img
         srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
@@ -67,25 +65,31 @@ function ImageItem({ item, index }) {
 export default function WovenImageList() {
   const imgs = [
     { img: "/KechuAukan/img/image2.jpg", alt: "parcela1" },
-{ img: "/KechuAukan/img/image5.jpg", alt: "parcela2" },
-{ img: "/KechuAukan/img/image6.jpg", alt: "parcela3" },
-{ img: "/KechuAukan/img/image7.jpg", alt: "parcela4" },
-{ img: "/KechuAukan/img/image8.jpg", alt: "parcela5" },
-{ img: "/KechuAukan/img/image9.jpg", alt: "parcela6" },
-{ img: "/KechuAukan/img/image10.jpg", alt: "parcela7" },
-{ img: "/KechuAukan/img/image11.jpg", alt: "parcela8" },
-{ img: "/KechuAukan/img/image12.jpg", alt: "parcela9" },
-{ img: "/KechuAukan/img/image13.jpg", alt: "parcela10" },
-{ img: "/KechuAukan/img/image14.jpg", alt: "parcela11" },
-{ img: "/KechuAukan/img/image15.jpg", alt: "parcela12" },
+    { img: "/KechuAukan/img/image5.jpg", alt: "parcela2" },
+    { img: "/KechuAukan/img/image6.jpg", alt: "parcela3" },
+    { img: "/KechuAukan/img/image7.jpg", alt: "parcela4" },
+    { img: "/KechuAukan/img/image8.jpg", alt: "parcela5" },
+    { img: "/KechuAukan/img/image9.jpg", alt: "parcela6" },
+    { img: "/KechuAukan/img/image10.jpg", alt: "parcela7" },
+    { img: "/KechuAukan/img/image11.jpg", alt: "parcela8" },
+    { img: "/KechuAukan/img/image12.jpg", alt: "parcela9" },
+    { img: "/KechuAukan/img/image13.jpg", alt: "parcela10" },
+    { img: "/KechuAukan/img/image14.jpg", alt: "parcela11" },
+    { img: "/KechuAukan/img/image15.jpg", alt: "parcela12" },
   ];
 
   return (
     <>
-      <ImageList sx={{ height:'auto', padding: "20px",
-           backgroundImage: "url('img/image112.png')",
-
-       }} variant="woven" cols={3} gap={8}>
+      <ImageList
+        sx={{
+          height: 'auto',
+          padding: "20px",
+          backgroundImage: "url('/KechuAukan/img/image112.png')",
+        }}
+        variant="woven"
+        cols={3}
+        gap={8}
+      >
         {imgs.map((item, index) => (
           <ImageItem key={item.img} item={item} index={index} />
         ))}
