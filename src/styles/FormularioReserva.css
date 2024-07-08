@@ -4,7 +4,7 @@
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
   position: fixed; /* Usa 'fixed' para posicionarlo relativo a la ventana */
   bottom: 150px;
-  z-index: 1000;
+  z-index: 1020;
 }
 
 .hamburger2 {
@@ -43,8 +43,8 @@
   justify-content: center;
   gap: 5px;
   width: 100vw;
-  height: 100%; /* Ajusta la altura para cubrir toda la ventana del navegador */
-  background-color: #ffffff;
+  height: 100vh; /* Ajusta la altura para cubrir toda la ventana del navegador */
+  background-color: #ff0000;
   position: fixed; /* Mantiene el menú en posición fija */
   top: 0; /* Alinea el menú con la parte superior de la ventana */
   right: 0; /* Alinea el menú con el lado derecho de la ventana */

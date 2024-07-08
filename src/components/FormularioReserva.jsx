@@ -134,7 +134,8 @@ function FormularioReserva() {
           </p>
           {openMenureserva ? <CloseIcon /> : <SendIcon />}
         </div>
-
+      </div>
+      
         <form
           className={openMenureserva ? "menu-shownReserva" : "menu-hiddenReserva"}
           onSubmit={handleSubmit}
@@ -144,6 +145,7 @@ function FormularioReserva() {
            >
             Reserva
           </Typography>
+
           <FormControl component="fieldset">
             <FormLabel component="legend"></FormLabel>
             <TextField
@@ -244,7 +246,6 @@ function FormularioReserva() {
 
           <Button type="submit" variant="outlined">Enviar</Button>
         </form>
-      </div>
     </ThemeProvider>
   );
 }
