@@ -139,7 +139,7 @@ function FormularioReserva() {
           className={openMenureserva ? "menu-shownReserva" : "menu-hiddenReserva"}
           onSubmit={handleSubmit}
         > 
-           <Typography  variant="h2" component="h1" className="titleReserva"
+           <Typography  variant="h4" component="h1" className="titleReserva"
            
            >
             Reserva

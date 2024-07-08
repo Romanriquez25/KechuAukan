@@ -8,18 +8,35 @@
 
  .header {
     display: flex;
-    align-items: center;
-    position: sticky;
-    padding: 5px;
-    height: 20vh;
-    background-color: #4cdaf0;
+    height: 100%;
+    min-height:  100vh;
+    flex-direction: column;
     width: 100vw;
-    background-size: cover, cover; /* Asegura que ambas imágenes cubran el área */
-    background-position: center center, center center; /* Centra ambas imágenes */
-    background-image: url(/img/image112.png);/* Ruta a tus imágenes */
-    position: relative;
+    overflow: auto;
+    background-size: cover; /* Asegura que ambas imágenes cubran el área */
+    background-position: 30% 50%; /* Centra ambas imágenes */
+    background-image: url(/img/enviadaBannerUrbano.jpg);/* Ruta a tus imágenes */
     z-index: 1; /* Asegura que la cabecera esté en la capa más baja */
   }
+
+  .cajaHeaderContent2{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+  }
+
+ 
+  .cajaHeaderContent3{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
   .logo {
     display: none;
   }
@@ -40,16 +57,16 @@
     font-family: "Poppins", sans-serif;
     font-weight: bold;
     font-size: 30px;
-    color: #2d2935;
+    color: #ffffff;
   }
 
   .navbar {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     position: relative; /* Asegura que el menú hamburguesa se posicione dentro del navbar */
     z-index: 2; /* Pone la barra de navegación en una capa superior al logo */
-    margin-top: 30vh; /* Ajusta el margen top para dejar espacio para el header */
+
   }
 
   .navbar li {
@@ -59,10 +76,7 @@
   }
 
   .hamburger {
-    position: absolute; /* Cambia a absolute para que esté dentro del contenedor nav */
     font-size: 50px;
-    top: -150px; /* Ajusta la posición según sea necesario */
-    right: 20px;
     z-index: 10; /* Asegura que el ícono de hamburguesa esté siempre visible por encima de todo */
     cursor: pointer;
     color: #ffffff;

@@ -42,6 +42,7 @@ function ImageItem({ item, index }) {
         "& img": {
           width: "100%",
           transition: "transform 0.5s ease, opacity 0.5s ease",
+         
           borderRadius: "8px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         },
@@ -82,10 +83,11 @@ export default function WovenImageList() {
     <>
       <ImageList
         sx={{
-          height: 'auto',
           padding: "20px",
           backgroundImage: "url('/KechuAukan/img/image112.png')",
-          autoFocus:"false"
+          autoFocus:"false",
+          minHeight: "100vh", 
+          overflow: "visible", // Asegura que no haya scroll
         }}
         variant="woven"
         cols={3}

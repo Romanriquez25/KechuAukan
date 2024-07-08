@@ -3,10 +3,11 @@ import { Typography, Link, Box } from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import InfoIcon from '@mui/icons-material/Info';
+import "../styles/ContactoLineas.css";
 
 const ContactSection = () => {
   return (
-    <Box sx={{ textAlign: "center", p: 2 }}>
+    <Box className="cajaContactoLineas">
       <Typography variant="h4" component="h2" gutterBottom>
         CONTÁCTANOS
       </Typography>

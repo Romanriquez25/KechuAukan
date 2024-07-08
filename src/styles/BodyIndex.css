@@ -1,6 +1,6 @@
 .cajaBodyIndex {
-  height: 70vh;
   width: 100%;
+  min-height: 50vh;
   overflow: auto;
   display: flex;
   justify-content: space-around;
